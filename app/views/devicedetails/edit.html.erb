@@ -1,0 +1,33 @@
+<h3>Edit Device Details</h3>
+
+<%= form_for(@devicedetail) do |f| %>
+
+  <%= f.label :enterdevice_no %> :
+  <%= f.text_field :deviceno %>
+  <br/><br/>
+  
+  <%= f.label :entercustomer_name %> :
+  <%= f.text_field :customer_name %>
+  <br/><br/>
+  
+  <%= f.label :uploadnearimage %> :
+  <%= f.file_field :nearimage %>
+  <%= image_tag @devicedetail.nearimage.url, :size => "90x90" %>
+  <br/><br/>
+  
+  <%= f.label :uploadintermediateimage %> :
+  <%= f.file_field :intermediateimage %>
+  <%= image_tag @devicedetail.intermediateimage.url, :size => "90x90" %>
+  <br/><br/>
+  
+  <%= f.label :uploadfarimage %> :
+  <%= f.file_field :farimage %>
+  <%= image_tag @devicedetail.farimage.url, :size => "90x90" %>
+  <br/><br/>
+  
+  <%= f.submit "Update" %>
+  
+<% end %>
+
+<br/>
+<%= link_to "Back", devicedetails_path %>

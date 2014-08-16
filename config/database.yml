@@ -1,0 +1,12 @@
+development:
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  encoding: SQL_ASCII
+  template: template0
+  database: coreprojectdemo_development
+  encoding: utf8
+  username: postgres
+  password: postgres
+  host: localhost  
+

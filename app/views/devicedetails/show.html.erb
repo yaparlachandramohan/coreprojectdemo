@@ -1,0 +1,18 @@
+<h4>Device Details</h4>
+
+Device No : <%= @devicedetail.deviceno %>
+<br/><br/>
+Customer Name : <%= @devicedetail.customer_name %>
+<br/><br/>
+Near image : <%= image_tag @devicedetail.nearimage.url, :size => "90x90" %>
+<br/><br/>
+Intermediate image : <%= image_tag @devicedetail.intermediateimage.url, :size => "90x90" %>
+<br/><br/>
+Far image : <%= image_tag @devicedetail.farimage.url, :size => "90x90" %> 
+<br/><br/>
+<%= link_to "Back", devicedetails_path %>
+
+
+
+
+

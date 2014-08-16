@@ -1,0 +1,25 @@
+<%= form_for(@devicedetail) do |f| %>
+
+  <%= f.label :enterdevice_no %> :
+  <%= f.text_field :deviceno %>
+  <br/><br/>
+  
+  <%= f.label :entercustomer_name %> :
+  <%= f.text_field :customer_name %>
+  <br/><br/>
+  
+  <%= f.label :uploadnearimage %> :
+  <%= f.file_field :nearimage %>
+  <br/><br/>
+  
+  <%= f.label :uploadintermediateimage %> :
+  <%= f.file_field :intermediateimage %>
+  <br/><br/>
+  
+  <%= f.label :uploadfarimage %> :
+  <%= f.file_field :farimage %>
+  <br/><br/>
+  
+  <%= f.submit "Save" %>
+  
+<% end %>

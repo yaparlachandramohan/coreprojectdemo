@@ -1,0 +1,36 @@
+<br/><br/>
+
+<h3>List of Device Details</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th>ID</th>
+      <th>Device No</th>
+      <th>Customer</th>
+      <!--<th>Created At</th>
+      <th>Updated AT</th>-->
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <% unless @devicedetails.blank? %>
+      <% @devicedetails.each do |devicedetail| %>
+      <tr>
+        <td><%= devicedetail.id %></td>
+        <td><%= devicedetail.deviceno %></td>
+        <td><%= devicedetail.customer_name %></td> 
+        <!--<td><%#= devicedetail.created_at %></td> 
+        <td><%#= devicedetail.updated_at %></td>-->
+        <td><%= link_to "Show", devicedetail_path(:id => devicedetail) %></td> 
+        <td><%= link_to "Edit", edit_devicedetail_path(devicedetail) %></td>  
+        <td><%= link_to "Destroy", devicedetail, :method => "delete", :confirm => "Are you sure?" %></td>  
+      </tr> 
+      <% end %>  
+    <% else %>
+      No Records found in database..! 
+    <% end %>
+  </tbody>
+</table>
+<br/>
+<%= link_to "Add Device Details", new_devicedetail_path %>
