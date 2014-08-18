@@ -25,6 +25,14 @@
   <%= image_tag @devicedetail.farimage.url, :size => "90x90" %>
   <br/><br/>
   
+  <%= f.label :enterminorid %> :
+  <%= f.text_field :minor_id %>
+  <br/><br/>
+  
+  <%= f.label :entermajorid %> :
+  <%= f.text_field :major_id %>
+  <br/><br/>
+  
   <%= f.submit "Update" %>
   
 <% end %>

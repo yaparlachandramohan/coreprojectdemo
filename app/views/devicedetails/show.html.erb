@@ -10,6 +10,10 @@ Intermediate image : <%= image_tag @devicedetail.intermediateimage.url, :size =>
 <br/><br/>
 Far image : <%= image_tag @devicedetail.farimage.url, :size => "90x90" %> 
 <br/><br/>
+Minor Id : <%= @devicedetail.minor_id %>
+<br/><br/>
+Major Id : <%= @devicedetail.major_id %>
+<br/><br/>
 <%= link_to "Back", devicedetails_path %>
 
 

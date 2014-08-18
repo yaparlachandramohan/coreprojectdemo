@@ -1,7 +1,8 @@
 class Devicedetail < ActiveRecord::Base
 
   attr_accessible :deviceno, :customer_name, :nearimage, :nearimage_url,  
-                  :intermediateimage, :intermediateimage_url, :farimage, :farimage_url  
+                  :intermediateimage, :intermediateimage_url, :farimage, :farimage_url, 
+                  :minor_id, :major_id   
 
   has_attached_file :nearimage, :storage => :s3, :s3_credentials => "#{Rails.root}/config/s3.yml", :path => ":attachment/:id/:style.:extension", :bucket => 'auxiribeacons'
   
